@@ -9,7 +9,8 @@ namespace Calculator.Classes
     class Operations
     {
         public static decimal addition (decimal augend, decimal addend) =>  augend + addend;
-        public static decimal subtraction(decimal minuend, decimal subtrahend) => minuend + subtrahend;
+        public static decimal subtraction(decimal minuend, decimal subtrahend) => minuend - subtrahend;
         public static decimal division(decimal dividend, decimal divisor) => dividend / divisor;
+        public static decimal multiplication(decimal multiplicand, decimal multiplier) => multiplicand * multiplier;
     }
 }
