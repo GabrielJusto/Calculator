@@ -60,6 +60,9 @@ namespace Calculator
             catch (ArgumentNullException)
             {
                 inTextBox.Text = " ";
+            }catch (OverflowException)
+            {
+                resultLabel.Text = "Overflow";
             }
         }
 
