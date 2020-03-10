@@ -32,8 +32,8 @@ namespace Calculator
 
         Keybord Kbord;
         string operation;
-        decimal? operator1;
-        decimal? operator2;
+        decimal operator1;
+        decimal operator2;
 
         public Form1()
         {
@@ -51,10 +51,8 @@ namespace Calculator
             try
             {
                 operator2 = decimal.Parse(inTextBox.Text);
-                resultLabel.Text = Kbord.dicFunc[operation]((decimal)operator1, (decimal)operator2).ToString();
+                resultLabel.Text = Kbord.dicFunc[operation](operator1, operator2).ToString();
                 inTextBox.Text = " ";
-                operator1 = null;
-                operator2 = null;
             } catch (FormatException)
             {
                 inTextBox.Text = " ";
@@ -63,6 +61,15 @@ namespace Calculator
             {
                 inTextBox.Text = " ";
             }
+        }
+
+        private void CButt_Click(object sender, EventArgs e) => inTextBox.Text = " ";
+
+        private void ACButt_Click(object sender, EventArgs e)
+        {
+            operation = null;
+            inTextBox.Text = " ";
+            resultLabel.Text = 0.ToString();
         }
 
         #region numbers buttons
@@ -76,19 +83,8 @@ namespace Calculator
         private void butt7_Click(object sender, EventArgs e) => ButtNumber(7);
         private void butt8_Click(object sender, EventArgs e) => ButtNumber(8);
         private void butt9_Click(object sender, EventArgs e) => ButtNumber(9);
+        private void butt0_Click(object sender, EventArgs e) => ButtNumber(0);
         #endregion
-
-        private void CButt_Click(object sender, EventArgs e) => inTextBox.Text = " ";
-
-        private void ACButt_Click(object sender, EventArgs e)
-        {
-            operation = null;
-            inTextBox.Text = " ";
-            resultLabel.Text = 0.ToString();
-            operator1 = null;
-            operator2 = null;
-        }
-
 
         #region operators buttons
         private void ButtOperator(string operation)
@@ -102,9 +98,11 @@ namespace Calculator
             catch (FormatException)
             {
                 if(inTextBox.Text == " ")
+                {
                     operator1 = decimal.Parse(resultLabel.Text);
-                inTextBox.Text = " ";
-                Console.WriteLine($"operator1: {operator1} \n operator2: {operator2}");
+                    this.operation = operation;
+                }
+                    inTextBox.Text = " ";
             }
 
 
@@ -114,5 +112,7 @@ namespace Calculator
         private void multButt_Click(object sender, EventArgs e) => ButtOperator("*");
         private void divButt_Click(object sender, EventArgs e) => ButtOperator("/");
         #endregion
+
+        
     }
 }
