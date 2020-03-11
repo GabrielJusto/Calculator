@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.butt7 = new System.Windows.Forms.Button();
-            this.butt8 = new System.Windows.Forms.Button();
-            this.plusButt = new System.Windows.Forms.Button();
             this.butt1 = new System.Windows.Forms.Button();
-            this.equalsButt = new System.Windows.Forms.Button();
             this.butt2 = new System.Windows.Forms.Button();
             this.butt3 = new System.Windows.Forms.Button();
             this.butt4 = new System.Windows.Forms.Button();
             this.butt5 = new System.Windows.Forms.Button();
             this.butt6 = new System.Windows.Forms.Button();
+            this.butt8 = new System.Windows.Forms.Button();
+            this.butt7 = new System.Windows.Forms.Button();
             this.butt9 = new System.Windows.Forms.Button();
-            this.multButt = new System.Windows.Forms.Button();
             this.subButt = new System.Windows.Forms.Button();
+            this.plusButt = new System.Windows.Forms.Button();
+            this.equalsButt = new System.Windows.Forms.Button();
+            this.multButt = new System.Windows.Forms.Button();
+            this.ACButt = new System.Windows.Forms.Button();
             this.divButt = new System.Windows.Forms.Button();
             this.CButt = new System.Windows.Forms.Button();
-            this.ACButt = new System.Windows.Forms.Button();
+            this.butt0 = new System.Windows.Forms.Button();
             this.inTextBox = new System.Windows.Forms.TextBox();
             this.resultLabel = new System.Windows.Forms.Label();
-            this.butt0 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,42 +88,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(236, 259);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // butt7
-            // 
-            this.butt7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butt7.Location = new System.Drawing.Point(3, 156);
-            this.butt7.Name = "butt7";
-            this.butt7.Size = new System.Drawing.Size(53, 45);
-            this.butt7.TabIndex = 12;
-            this.butt7.Text = "7";
-            this.butt7.UseVisualStyleBackColor = true;
-            this.butt7.Click += new System.EventHandler(this.butt7_Click);
-            // 
-            // butt8
-            // 
-            this.butt8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butt8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butt8.Location = new System.Drawing.Point(62, 156);
-            this.butt8.Name = "butt8";
-            this.butt8.Size = new System.Drawing.Size(53, 45);
-            this.butt8.TabIndex = 11;
-            this.butt8.Text = "8";
-            this.butt8.UseVisualStyleBackColor = true;
-            this.butt8.Click += new System.EventHandler(this.butt8_Click);
-            // 
-            // plusButt
-            // 
-            this.plusButt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.plusButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusButt.Location = new System.Drawing.Point(180, 105);
-            this.plusButt.Name = "plusButt";
-            this.plusButt.Size = new System.Drawing.Size(53, 45);
-            this.plusButt.TabIndex = 3;
-            this.plusButt.Text = "+";
-            this.plusButt.UseVisualStyleBackColor = true;
-            this.plusButt.Click += new System.EventHandler(this.plusButt_Click);
-            // 
             // butt1
             // 
             this.butt1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -135,18 +99,6 @@
             this.butt1.Text = "1";
             this.butt1.UseVisualStyleBackColor = true;
             this.butt1.Click += new System.EventHandler(this.butt1_Click_1);
-            // 
-            // equalsButt
-            // 
-            this.equalsButt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.equalsButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equalsButt.Location = new System.Drawing.Point(180, 156);
-            this.equalsButt.Name = "equalsButt";
-            this.equalsButt.Size = new System.Drawing.Size(53, 45);
-            this.equalsButt.TabIndex = 5;
-            this.equalsButt.Text = "=";
-            this.equalsButt.UseVisualStyleBackColor = true;
-            this.equalsButt.Click += new System.EventHandler(this.equalsButt_Click);
             // 
             // butt2
             // 
@@ -208,6 +160,30 @@
             this.butt6.UseVisualStyleBackColor = true;
             this.butt6.Click += new System.EventHandler(this.butt6_Click);
             // 
+            // butt8
+            // 
+            this.butt8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butt8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butt8.Location = new System.Drawing.Point(62, 156);
+            this.butt8.Name = "butt8";
+            this.butt8.Size = new System.Drawing.Size(53, 45);
+            this.butt8.TabIndex = 11;
+            this.butt8.Text = "8";
+            this.butt8.UseVisualStyleBackColor = true;
+            this.butt8.Click += new System.EventHandler(this.butt8_Click);
+            // 
+            // butt7
+            // 
+            this.butt7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butt7.Location = new System.Drawing.Point(3, 156);
+            this.butt7.Name = "butt7";
+            this.butt7.Size = new System.Drawing.Size(53, 45);
+            this.butt7.TabIndex = 12;
+            this.butt7.Text = "7";
+            this.butt7.UseVisualStyleBackColor = true;
+            this.butt7.Click += new System.EventHandler(this.butt7_Click);
+            // 
             // butt9
             // 
             this.butt9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -220,6 +196,41 @@
             this.butt9.UseVisualStyleBackColor = true;
             this.butt9.Click += new System.EventHandler(this.butt9_Click);
             // 
+            // subButt
+            // 
+            this.subButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subButt.Location = new System.Drawing.Point(180, 54);
+            this.subButt.Name = "subButt";
+            this.subButt.Size = new System.Drawing.Size(53, 45);
+            this.subButt.TabIndex = 15;
+            this.subButt.Text = "-";
+            this.subButt.UseVisualStyleBackColor = true;
+            this.subButt.Click += new System.EventHandler(this.subButt_Click);
+            // 
+            // plusButt
+            // 
+            this.plusButt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.plusButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusButt.Location = new System.Drawing.Point(180, 105);
+            this.plusButt.Name = "plusButt";
+            this.plusButt.Size = new System.Drawing.Size(53, 45);
+            this.plusButt.TabIndex = 3;
+            this.plusButt.Text = "+";
+            this.plusButt.UseVisualStyleBackColor = true;
+            this.plusButt.Click += new System.EventHandler(this.plusButt_Click);
+            // 
+            // equalsButt
+            // 
+            this.equalsButt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.equalsButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equalsButt.Location = new System.Drawing.Point(180, 156);
+            this.equalsButt.Name = "equalsButt";
+            this.equalsButt.Size = new System.Drawing.Size(53, 45);
+            this.equalsButt.TabIndex = 5;
+            this.equalsButt.Text = "=";
+            this.equalsButt.UseVisualStyleBackColor = true;
+            this.equalsButt.Click += new System.EventHandler(this.equalsButt_Click);
+            // 
             // multButt
             // 
             this.multButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -231,16 +242,19 @@
             this.multButt.UseVisualStyleBackColor = true;
             this.multButt.Click += new System.EventHandler(this.multButt_Click);
             // 
-            // subButt
+            // ACButt
             // 
-            this.subButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subButt.Location = new System.Drawing.Point(180, 54);
-            this.subButt.Name = "subButt";
-            this.subButt.Size = new System.Drawing.Size(53, 45);
-            this.subButt.TabIndex = 15;
-            this.subButt.Text = "-";
-            this.subButt.UseVisualStyleBackColor = true;
-            this.subButt.Click += new System.EventHandler(this.subButt_Click);
+            this.ACButt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ACButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ACButt.Location = new System.Drawing.Point(3, 3);
+            this.ACButt.Name = "ACButt";
+            this.ACButt.Size = new System.Drawing.Size(53, 45);
+            this.ACButt.TabIndex = 0;
+            this.ACButt.Text = "AC";
+            this.ACButt.UseVisualStyleBackColor = true;
+            this.ACButt.Click += new System.EventHandler(this.ACButt_Click);
             // 
             // divButt
             // 
@@ -267,19 +281,16 @@
             this.CButt.UseVisualStyleBackColor = true;
             this.CButt.Click += new System.EventHandler(this.CButt_Click);
             // 
-            // ACButt
+            // butt0
             // 
-            this.ACButt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ACButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ACButt.Location = new System.Drawing.Point(3, 3);
-            this.ACButt.Name = "ACButt";
-            this.ACButt.Size = new System.Drawing.Size(53, 45);
-            this.ACButt.TabIndex = 0;
-            this.ACButt.Text = "AC";
-            this.ACButt.UseVisualStyleBackColor = true;
-            this.ACButt.Click += new System.EventHandler(this.ACButt_Click);
+            this.butt0.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butt0.Location = new System.Drawing.Point(62, 207);
+            this.butt0.Name = "butt0";
+            this.butt0.Size = new System.Drawing.Size(53, 49);
+            this.butt0.TabIndex = 17;
+            this.butt0.Text = "0";
+            this.butt0.UseVisualStyleBackColor = true;
+            this.butt0.Click += new System.EventHandler(this.butt0_Click);
             // 
             // inTextBox
             // 
@@ -290,6 +301,7 @@
             this.inTextBox.Name = "inTextBox";
             this.inTextBox.Size = new System.Drawing.Size(236, 47);
             this.inTextBox.TabIndex = 2;
+            this.inTextBox.TextChanged += new System.EventHandler(this.inTextBox_TextChanged);
             // 
             // resultLabel
             // 
@@ -302,17 +314,6 @@
             this.resultLabel.Size = new System.Drawing.Size(36, 39);
             this.resultLabel.TabIndex = 3;
             this.resultLabel.Text = "0";
-            // 
-            // butt0
-            // 
-            this.butt0.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butt0.Location = new System.Drawing.Point(62, 207);
-            this.butt0.Name = "butt0";
-            this.butt0.Size = new System.Drawing.Size(53, 49);
-            this.butt0.TabIndex = 17;
-            this.butt0.Text = "0";
-            this.butt0.UseVisualStyleBackColor = true;
-            this.butt0.Click += new System.EventHandler(this.butt0_Click);
             // 
             // Form1
             // 

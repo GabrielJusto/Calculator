@@ -75,8 +75,18 @@ namespace Calculator
             resultLabel.Text = 0.ToString();
         }
 
+        private void inTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (inTextBox.Text.Length > 8)
+                inTextBox.Text = inTextBox.Text.Substring(0, 8);
+        }
+
         #region numbers buttons
-        private void ButtNumber(int number) => inTextBox.Text += number.ToString();
+        private void ButtNumber(int number)
+        {
+            if(inTextBox.Text.Length < 8)
+                inTextBox.Text += number.ToString();        
+        }
         private void butt1_Click_1(object sender, EventArgs e) => ButtNumber(1);
         private void butt2_Click(object sender, EventArgs e) => ButtNumber(2);
         private void butt3_Click(object sender, EventArgs e) => ButtNumber(3);
@@ -114,8 +124,9 @@ namespace Calculator
         private void subButt_Click(object sender, EventArgs e) => ButtOperator("-");
         private void multButt_Click(object sender, EventArgs e) => ButtOperator("*");
         private void divButt_Click(object sender, EventArgs e) => ButtOperator("/");
+
         #endregion
 
-        
+
     }
 }
