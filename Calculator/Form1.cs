@@ -14,11 +14,11 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        internal class Keybord
+        internal class Keyboard
         { 
             public Dictionary<string, Func<decimal, decimal, decimal>> dicFunc;
             
-            public Keybord()
+            public Keyboard()
             {
                 dicFunc = new Dictionary<string, Func<decimal, decimal, decimal>>();
                 Func<decimal, decimal, decimal> op = Calculator.Classes.Operations.addition;
@@ -30,62 +30,85 @@ namespace Calculator
 
         }
 
-        Keybord Kbord;
+        Keyboard kbord;
         string operation;
         decimal operator1;
         decimal operator2;
+        bool dec;
+       
 
         public Form1()
         {
-            Kbord = new Keybord();
+            kbord = new Keyboard();
+            dec = false;
             InitializeComponent();
         }
 
 
-        
-        
-        
-        
         private void equalsButt_Click(object sender, EventArgs e)
         {
             try
             {
-                operator2 = decimal.Parse(inTextBox.Text);
-                resultLabel.Text = Kbord.dicFunc[operation](operator1, operator2).ToString();
-                inTextBox.Text = " ";
+                dec = false;
+                operator2 = decimal.Parse(inLabel.Text);
+                resultLabel.Text = kbord.dicFunc[operation](operator1, operator2).ToString();
+                inLabel.Text = "";
             } catch (FormatException)
             {
-                inTextBox.Text = " ";
+                inLabel.Text = "";
             }
             catch (ArgumentNullException)
             {
-                inTextBox.Text = " ";
+                inLabel.Text = "";
             }catch (OverflowException)
             {
                 resultLabel.Text = "Overflow";
             }
         }
 
-        private void CButt_Click(object sender, EventArgs e) => inTextBox.Text = " ";
+        private void CButt_Click(object sender, EventArgs e) => inLabel.Text = " ";
 
         private void ACButt_Click(object sender, EventArgs e)
         {
             operation = null;
-            inTextBox.Text = " ";
+            inLabel.Text = "";
             resultLabel.Text = 0.ToString();
+            dec = false;
         }
 
-        private void inTextBox_TextChanged(object sender, EventArgs e)
+
+        private void signalInvButt_Click(object sender, EventArgs e)
         {
-            if (inTextBox.Text.Length > 8)
-                inTextBox.Text = inTextBox.Text.Substring(0, 8);
+            decimal aux = decimal.Parse(resultLabel.Text.ToString());
+            aux = -aux;
+            resultLabel.Text = aux.ToString();
         }
+
+        private void decimalButt_Click(object sender, EventArgs e)
+        {
+            if (inLabel.Text.Length < 8 && !dec)
+                inLabel.Text += ".";
+            dec = true;
+        }
+
+
 
         #region numbers buttons
         private void ButtNumber(int number)
         {
-            if(inTextBox.Text.Length < 8)
-                inTextBox.Text += number.ToString();        
+            string decPart;
+            if(inLabel.Text.Contains('.'))
+            {
+                decPart = inLabel.Text.Split('.')[1];
+                Console.WriteLine($"number size: {inLabel.Text.Length}"); 
+                Console.WriteLine($"decimal size: {decPart.Length}");
+                if (inLabel.Text.Length < 9 && decPart.Length < 3)
+                {
+                    inLabel.Text += number.ToString();
+                    Console.WriteLine("cheguei aqui");
+                }      
+            }else if (inLabel.Text.Length < 8)
+                inLabel.Text += number.ToString();
         }
         private void butt1_Click_1(object sender, EventArgs e) => ButtNumber(1);
         private void butt2_Click(object sender, EventArgs e) => ButtNumber(2);
@@ -104,18 +127,19 @@ namespace Calculator
         {
             try
             {
-                operator1 = decimal.Parse(inTextBox.Text);
+                dec = false;
+                operator1 = decimal.Parse(inLabel.Text);
                 this.operation = operation;
-                inTextBox.Text = " ";
+                inLabel.Text = "";
             }
             catch (FormatException)
             {
-                if(inTextBox.Text == " ")
+                if(inLabel.Text == "")
                 {
                     operator1 = decimal.Parse(resultLabel.Text);
                     this.operation = operation;
                 }
-                    inTextBox.Text = " ";
+                    inLabel.Text = "";
             }
 
 
@@ -124,6 +148,9 @@ namespace Calculator
         private void subButt_Click(object sender, EventArgs e) => ButtOperator("-");
         private void multButt_Click(object sender, EventArgs e) => ButtOperator("*");
         private void divButt_Click(object sender, EventArgs e) => ButtOperator("/");
+
+
+
 
         #endregion
 
