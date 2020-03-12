@@ -53,6 +53,7 @@ namespace Calculator
                 operator2 = decimal.Parse(inLabel.Text);
                 resultLabel.Text = kbord.dicFunc[operation](operator1, operator2).ToString();
                 inLabel.Text = "";
+                opLabel.Text = "";
             } catch (FormatException)
             {
                 inLabel.Text = "";
@@ -66,7 +67,7 @@ namespace Calculator
             }
         }
 
-        private void CButt_Click(object sender, EventArgs e) => inLabel.Text = " ";
+        private void CButt_Click(object sender, EventArgs e) => inLabel.Text = "";
 
         private void ACButt_Click(object sender, EventArgs e)
         {
@@ -74,6 +75,7 @@ namespace Calculator
             inLabel.Text = "";
             resultLabel.Text = 0.ToString();
             dec = false;
+            opLabel.Text = "";
         }
 
 
@@ -131,6 +133,8 @@ namespace Calculator
                 operator1 = decimal.Parse(inLabel.Text);
                 this.operation = operation;
                 inLabel.Text = "";
+                opLabel.Text = operation;
+                resultLabel.Text = operator1.ToString();
             }
             catch (FormatException)
             {
@@ -138,6 +142,7 @@ namespace Calculator
                 {
                     operator1 = decimal.Parse(resultLabel.Text);
                     this.operation = operation;
+                    opLabel.Text = operation;
                 }
                     inLabel.Text = "";
             }
@@ -152,8 +157,8 @@ namespace Calculator
 
 
 
-        #endregion
 
+        #endregion
 
     }
 }

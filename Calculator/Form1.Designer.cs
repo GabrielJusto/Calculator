@@ -50,6 +50,7 @@
             this.ACButt = new System.Windows.Forms.Button();
             this.resultLabel = new System.Windows.Forms.Label();
             this.inLabel = new System.Windows.Forms.Label();
+            this.opLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -324,7 +325,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.resultLabel.AutoSize = true;
             this.resultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultLabel.Location = new System.Drawing.Point(12, 62);
+            this.resultLabel.Location = new System.Drawing.Point(12, 21);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(36, 39);
             this.resultLabel.TabIndex = 3;
@@ -334,16 +335,26 @@
             // 
             this.inLabel.AutoSize = true;
             this.inLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inLabel.Location = new System.Drawing.Point(12, 23);
+            this.inLabel.Location = new System.Drawing.Point(12, 62);
             this.inLabel.Name = "inLabel";
             this.inLabel.Size = new System.Drawing.Size(0, 39);
             this.inLabel.TabIndex = 4;
+            // 
+            // opLabel
+            // 
+            this.opLabel.AutoSize = true;
+            this.opLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opLabel.Location = new System.Drawing.Point(215, 39);
+            this.opLabel.Name = "opLabel";
+            this.opLabel.Size = new System.Drawing.Size(0, 31);
+            this.opLabel.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(260, 375);
+            this.Controls.Add(this.opLabel);
             this.Controls.Add(this.inLabel);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -379,6 +390,7 @@
         private System.Windows.Forms.Button signalInvButt;
         private System.Windows.Forms.Button decimalButt;
         private System.Windows.Forms.Label inLabel;
+        private System.Windows.Forms.Label opLabel;
     }
 }
 
